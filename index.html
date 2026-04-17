@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>¿Quién soy yo en la red?</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0a0a12;--card:#16162a;--a1:#7c5cfc;--a2:#00e5c0;--a3:#ff5e8a;--a4:#f0c84a;--tx:#e8e8f0;--mu:#8888aa;--br:rgba(124,92,252,0.18);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--tx);font-family:'Space Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 24px 60px;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.32;animation:pu 7s ease-in-out infinite alternate;}
+.o1{width:520px;height:520px;background:var(--a1);top:-160px;left:-160px;}
+.o2{width:420px;height:420px;background:var(--a2);bottom:-110px;right:-110px;animation-delay:2.5s;}
+.o3{width:320px;height:320px;background:var(--a3);top:38%;left:54%;animation-delay:5s;}
+@keyframes pu{from{transform:scale(1);}to{transform:scale(1.14) translate(18px,-18px);}}
+.htag{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--a2);background:rgba(0,229,192,.08);border:1px solid rgba(0,229,192,.25);padding:6px 18px;border-radius:100px;display:inline-block;margin-bottom:28px;position:relative;z-index:1;}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,8vw,6rem);font-weight:800;line-height:1.05;position:relative;z-index:1;max-width:900px;}
+.gr{background:linear-gradient(135deg,var(--a1),var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hsub{font-size:1.15rem;color:var(--mu);max-width:620px;margin-top:24px;position:relative;z-index:1;}
+.hq{margin-top:44px;padding:26px 34px;border:1px solid var(--br);border-left:4px solid var(--a1);background:rgba(124,92,252,.07);border-radius:12px;font-size:1.15rem;font-style:italic;max-width:680px;position:relative;z-index:1;}
+.hq strong{color:var(--a2);font-style:normal;}
+.sc{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.72rem;color:var(--mu);letter-spacing:.1em;z-index:1;animation:bn 2s ease-in-out infinite;}
+@keyframes bn{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(8px);}}
+.ar{width:18px;height:18px;border-right:2px solid var(--a1);border-bottom:2px solid var(--a1);transform:rotate(45deg);}
+/* LAYOUT */
+.w{max-width:860px;margin:0 auto;padding:0 24px;}
+section{padding:76px 0;}
+.lb{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--a1);margin-bottom:14px;}
+.lb::before{content:'';display:block;width:24px;height:2px;background:var(--a1);}
+h2{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;margin-bottom:28px;line-height:1.2;}
+h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:10px;}
+p{margin-bottom:14px;color:var(--tx);}p:last-child{margin-bottom:0;}
+.dv{height:1px;background:linear-gradient(to right,transparent,var(--br),transparent);}
+.ic{background:var(--card);border:1px solid var(--br);border-radius:20px;padding:38px 42px;}
+/* STEPS */
+.steps{display:flex;flex-direction:column;}
+.step{display:grid;grid-template-columns:56px 1fr;gap:0 26px;position:relative;}
+.step:not(:last-child) .sl{position:absolute;left:27px;top:56px;bottom:0;width:2px;background:linear-gradient(to bottom,var(--a1),transparent);}
+.sn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;flex-shrink:0;position:relative;z-index:1;}
+.sb{padding-bottom:50px;}
+.step:last-child .sb{padding-bottom:0;}
+.st{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
+.step p{color:var(--mu);font-size:.94rem;}
+.s1 .sn{background:rgba(255,94,138,.12);color:var(--a3);border:2px solid rgba(255,94,138,.3);}.s1 .st{color:var(--a3);}
+.s2 .sn{background:rgba(124,92,252,.12);color:var(--a1);border:2px solid rgba(124,92,252,.3);}.s2 .st{color:var(--a1);}
+.s3 .sn{background:rgba(0,229,192,.12);color:var(--a2);border:2px solid rgba(0,229,192,.3);}.s3 .st{color:var(--a2);}
+.s4 .sn{background:rgba(240,200,74,.12);color:var(--a4);border:2px solid rgba(240,200,74,.3);}.s4 .st{color:var(--a4);}
+.s5 .sn{background:rgba(124,92,252,.15);color:var(--a1);border:2px solid rgba(124,92,252,.4);}.s5 .st{color:var(--a1);}
+/* BOXES */
+.gb{background:rgba(0,229,192,.05);border:1px solid rgba(0,229,192,.2);border-left:4px solid var(--a2);border-radius:12px;padding:18px 22px;margin-top:14px;}
+.gt{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--a2);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.gt::before{content:'▸';}
+.gb ul,.gb ol{padding-left:18px;}.gb li{margin-bottom:7px;color:var(--mu);font-size:.91rem;}.gb li strong{color:var(--tx);}
+.gb.gp{background:rgba(124,92,252,.07);border-color:rgba(124,92,252,.25);border-left-color:var(--a1);}
+.gb.gp .gt{color:var(--a1);}
+.gb.gg{background:rgba(0,229,192,.08);border-color:rgba(0,229,192,.3);}
+.vb{background:rgba(255,94,138,.05);border:1px solid rgba(255,94,138,.2);border-left:4px solid var(--a3);border-radius:12px;padding:18px 22px;margin-top:14px;}
+.vb+.vb{margin-top:10px;}
+.vt{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--a3);margin-bottom:9px;display:flex;align-items:center;gap:6px;}
+.vt::before{content:'▶';}
+.vb p{color:var(--mu);font-size:.91rem;}
+.vl{display:inline-flex;align-items:center;gap:7px;margin-top:11px;padding:8px 16px;background:rgba(255,94,138,.1);border:1px solid rgba(255,94,138,.3);border-radius:8px;color:var(--a3);text-decoration:none;font-size:.84rem;font-weight:600;transition:background .2s,transform .2s;}
+.vl:hover{background:rgba(255,94,138,.22);transform:translateX(4px);}
+.rl{display:inline-flex;align-items:center;gap:7px;margin-top:11px;padding:9px 18px;background:rgba(124,92,252,.1);border:1px solid rgba(124,92,252,.3);border-radius:8px;color:var(--a1);text-decoration:none;font-size:.87rem;font-weight:600;transition:background .2s,transform .2s;}
+.rl:hover{background:rgba(124,92,252,.22);transform:translateX(4px);}
+.rf{background:rgba(240,200,74,.05);border:1px solid rgba(240,200,74,.2);border-left:4px solid var(--a4);border-radius:12px;padding:18px 22px;margin-top:14px;}
+.rft{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--a4);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.rft::before{content:'✍️';}
+.rf ul,.rf ol{padding-left:18px;}.rf li{margin-bottom:7px;color:var(--mu);font-size:.91rem;}.rf li strong{color:var(--tx);}
+.mu{color:var(--mu);}
+/* PRODUCT */
+.pc{background:var(--card);border:1px solid var(--br);border-radius:22px;padding:48px 42px;position:relative;overflow:hidden;}
+.pc::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(124,92,252,.12),transparent 65%),radial-gradient(ellipse at bottom left,rgba(0,229,192,.08),transparent 65%);pointer-events:none;}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px;}
+.pi{background:rgba(255,255,255,.04);border:1px solid var(--br);border-radius:14px;padding:22px;}
+.pi .ico{font-size:1.9rem;margin-bottom:10px;}
+.pi h4{font-family:'Syne',sans-serif;font-size:1rem;margin-bottom:7px;}
+.pi p{font-size:.87rem;color:var(--mu);}
+/* EVAL */
+.eg{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:14px;margin-top:22px;}
+.ei{background:var(--card);border:1px solid var(--br);border-radius:12px;padding:18px;}
+.el{font-size:.63rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mu);margin-bottom:8px;}
+.ei p{font-size:.87rem;color:var(--tx);margin:0;}
+/* BANNER */
+.bn{background:linear-gradient(135deg,rgba(124,92,252,.15),rgba(0,229,192,.1));border:1px solid rgba(124,92,252,.3);border-radius:20px;padding:46px 42px;text-align:center;margin:72px 0;}
+.bn h2{font-size:clamp(1.4rem,4vw,2rem);margin-bottom:14px;}
+.bn p{color:var(--mu);max-width:540px;margin:0 auto 8px;}
+footer{text-align:center;padding:36px 24px;font-size:.79rem;color:var(--mu);border-top:1px solid var(--br);}
+footer a{color:var(--a1);text-decoration:none;}
+@media(max-width:600px){.pg{grid-template-columns:1fr;}.ic,.pc{padding:26px 22px;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <span class="htag">1.º Bachillerato &middot; Tecnología e Innovación Digital</span>
+  <h1><span class="gr">¿Quién soy yo<br>en la red?</span></h1>
+  <p class="hsub">Cada like, cada búsqueda, cada foto publicada construye una versión de ti que existe en el mundo digital. ¿Tienes control sobre ella?</p>
+  <div class="hq">Tu reto central: <strong>¿podría una IA saber exactamente quién eres con solo analizar tus datos digitales?</strong></div>
+  <div class="sc"><span>EMPIEZA</span><div class="ar"></div></div>
+</header>
+
+<section>
+  <div class="w">
+    <span class="lb">De qué va esto</span>
+    <h2>Tu presencia digital bajo la lupa</h2>
+    <div class="ic">
+      <p>Vivimos conectados constantemente: redes sociales, plataformas de streaming, búsquedas, mensajes, fotos. Todo eso genera datos. Y esos datos dicen mucho sobre ti, a veces más de lo que tú mismo crees.</p>
+      <p>En esta unidad vas a explorar qué es la inteligencia artificial y cómo funciona, qué información conforma tu <strong>identidad digital</strong>, cómo los sistemas de IA pueden <strong>clasificarte como persona</strong> a partir de esos datos, y qué implica ética y socialmente que eso ocurra.</p>
+      <p>Al final construirás tu propio <strong>mapa de identidad digital</strong> y un <strong>decálogo de buenas prácticas</strong> para moverte en la red de forma consciente y crítica.</p>
+    </div>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<section>
+  <div class="w">
+    <span class="lb">El recorrido</span>
+    <h2>Actividades paso a paso</h2>
+    <div class="steps">
+
+      <div class="step s1">
+        <div class="sl"></div>
+        <div class="sn">01</div>
+        <div class="sb">
+          <div class="st">Motivar &middot; Movilizar</div>
+          <h3>¿Puede una máquina saber quién eres?</h3>
+          <p>Arrancamos con una pregunta que lleva décadas inquietando a científicos y filósofos: ¿puede una máquina comportarse como un ser humano? ¿Puede conocerte mejor que tú mismo? Mira estos dos vídeos antes de continuar:</p>
+          <div class="vb">
+            <div class="vt">Vídeo 1 &middot; ¿Qué es la Inteligencia Artificial? — DW Español (4 min)</div>
+            <p>Introducción directa y visual: qué es la IA, cómo funciona y en qué partes de tu vida ya está presente sin que lo notes.</p>
+            <a class="vl" href="https://www.youtube.com/watch?v=mJeNghZXtMo" target="_blank" rel="noopener">&#9660; Ver en YouTube &rarr; DW Español</a>
+          </div>
+          <div class="vb">
+            <div class="vt">Vídeo 2 &middot; El Test de Turing — CuriosaMente (5 min)</div>
+            <p>¿Puede una máquina engañarte haciéndose pasar por humana? Canal de divulgación científica con animación muy accesible para explicar este experimento clave.</p>
+            <a class="vl" href="https://www.youtube.com/watch?v=3wLqsRLvV-c" target="_blank" rel="noopener">&#9660; Ver en YouTube &rarr; CuriosaMente</a>
+          </div>
+          <div class="rf" style="margin-top:18px;">
+            <div class="rft">Reflexión individual — después de los vídeos</div>
+            <p class="mu" style="font-size:.91rem;margin-bottom:10px;">Anota tus respuestas en tu cuaderno o documento digital. No hay respuestas correctas ni incorrectas:</p>
+            <ol>
+              <li>¿Qué plataformas digitales usas habitualmente? ¿Qué tipo de datos crees que guardan sobre ti?</li>
+              <li>Si una IA analizara todo lo que publicas y buscas, ¿qué perfil construiría de ti? ¿Estaría acertado?</li>
+              <li>¿Crees que podrías distinguir si estás hablando con una persona o con una IA en un chat? ¿Qué señales buscarías?</li>
+              <li>¿Crees que tienes control sobre tu identidad digital? ¿Por qué sí o por qué no?</li>
+            </ol>
+            <p class="mu" style="font-size:.91rem;margin-top:10px;"><strong style="color:var(--tx);">Guarda estas respuestas:</strong> las recuperarás al final para ver cuánto ha cambiado tu perspectiva.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step s2">
+        <div class="sl"></div>
+        <div class="sn">02</div>
+        <div class="sb">
+          <div class="st">Activar</div>
+          <h3>La IA, la historia y nosotros</h3>
+          <p>Antes de analizar cómo la IA nos clasifica, hay que entender qué es y de dónde viene. Empieza con esta lectura:</p>
+          <a class="rl" href="https://www.iberdrola.com/conocenos/nuestro-modelo-innovacion/historia-inteligencia-artificial" target="_blank" rel="noopener">&#128214; Lectura: Historia de la IA — Iberdrola</a>
+          <div class="gb" style="margin-top:16px;">
+            <div class="gt">Guía de trabajo — después de la lectura</div>
+            <ul>
+              <li><strong>El Test de Turing:</strong> explícalo con tus propias palabras en 3-4 líneas. ¿Por qué fue tan revolucionario?</li>
+              <li><strong>Línea del tiempo:</strong> identifica al menos 4 hitos clave en la historia de la IA y anótalos con una frase cada uno.</li>
+              <li><strong>Conexión con tu vida:</strong> ¿cuáles de las aplicaciones de IA mencionadas usas tú? ¿Eras consciente de que eran IA?</li>
+            </ul>
+          </div>
+          <div class="rf">
+            <div class="rft">Reflexión individual — transparencia y algoritmos</div>
+            <ol>
+              <li>¿Es justo que una IA tome decisiones sobre personas —quién obtiene un crédito, qué contenido ve, quién es sospechoso— basándose solo en datos? Argumenta tu respuesta.</li>
+              <li>¿Qué diferencia hay entre que esa decisión la tome una persona y que la tome un algoritmo?</li>
+              <li>Busca un caso real en el que un algoritmo haya sido injusto o discriminatorio y descríbelo brevemente.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="step s3">
+        <div class="sl"></div>
+        <div class="sn">03</div>
+        <div class="sb">
+          <div class="st">Explorar</div>
+          <h3>Casos reales y clasificación supervisada</h3>
+          <p>¿Cómo clasifica una IA a las personas? Primero un vídeo sobre sesgos algorítmicos documentados, y después una simulación en la que tú serás el clasificador.</p>
+          <div class="vb">
+            <div class="vt">Vídeo 3 &middot; Cuando la IA discrimina — Telemundo Noticias (6 min)</div>
+            <p>Reportaje periodístico sobre casos reales en los que sistemas de IA han discriminado por raza, género o clase social. Directo y con ejemplos concretos.</p>
+            <a class="vl" href="https://www.youtube.com/watch?v=Ok5sKLXqynQ" target="_blank" rel="noopener">&#9660; Ver en YouTube &rarr; Telemundo</a>
+          </div>
+          <div class="gb" style="margin-top:16px;">
+            <div class="gt">Análisis de caso — elige uno y trabájalo en profundidad</div>
+            <p class="mu" style="font-size:.91rem;margin-bottom:10px;">Escoge uno, investígalo brevemente y prepara una respuesta escrita de media página:</p>
+            <ul>
+              <li><strong>Caso A — Reconocimiento facial:</strong> sistemas que se equivocan mucho más con personas de piel oscura. ¿Por qué ocurre? ¿Qué consecuencias tiene?</li>
+              <li><strong>Caso B — Filtros de contenido:</strong> redes sociales que usan IA para moderar. ¿Qué problemas han surgido? ¿Quién decide lo que es inapropiado?</li>
+              <li><strong>Caso C — Selección de personal:</strong> Amazon descartó en 2018 su IA de RRHH porque penalizaba los currículums de mujeres. ¿Qué riesgos tiene esto?</li>
+              <li><strong>Caso D — Crédito algorítmico:</strong> en 2019, Apple Card asignaba límites distintos a mujeres y hombres con el mismo historial financiero. ¿Es justo? ¿Por qué ocurrió?</li>
+            </ul>
+          </div>
+          <div class="gb gg" style="margin-top:14px;">
+            <div class="gt">Simulación — tú como clasificador</div>
+            <p class="mu" style="font-size:.91rem;margin-bottom:10px;">Actuarás como si fueras una IA que clasifica perfiles digitales. Se te presentarán fichas con datos de cada perfil: edad, tipo de publicaciones, horarios de conexión, búsquedas frecuentes, apps usadas.</p>
+            <ol>
+              <li>Clasifica cada perfil según los criterios indicados.</li>
+              <li>Analiza tus aciertos y errores: ¿en qué te has equivocado? ¿Por qué?</li>
+              <li>Reflexiona: una IA haría esto de forma automática con millones de perfiles. ¿Qué implicaciones tiene?</li>
+            </ol>
+          </div>
+          <div class="rf">
+            <div class="rft">Reflexión individual — después de la simulación</div>
+            <ol>
+              <li>¿Qué datos de los tuyos podrían usarse para clasificarte sin que tú lo supieras?</li>
+              <li>¿Estarías de acuerdo con esa clasificación? ¿Te representaría bien?</li>
+              <li>¿Cambia algo en tu comportamiento digital saber que podrías ser clasificado así?</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="step s4">
+        <div class="sl"></div>
+        <div class="sn">04</div>
+        <div class="sb">
+          <div class="st">Estructurar</div>
+          <h3>Mapeamos nuestra identidad digital</h3>
+          <p>Con todo lo que has explorado, es momento de ordenar las ideas y aplicarlas a ti mismo. Vas a crear un esquema visual de tu identidad digital.</p>
+          <div class="gb">
+            <div class="gt">Cómo construir tu mapa de identidad digital</div>
+            <p class="mu" style="font-size:.91rem;margin-bottom:10px;">Organiza el mapa en torno a estas cinco dimensiones. Usa Canva, Genially o cualquier herramienta visual que prefieras:</p>
+            <ul>
+              <li><strong>¿Quién soy en la red?</strong> Plataformas que uso, tipo de contenido que genero, cómo me presento.</li>
+              <li><strong>¿Qué datos dejo?</strong> Datos que comparto conscientemente (fotos, textos) y los que se recogen sin que lo notes (localización, horarios, clics).</li>
+              <li><strong>¿Cómo me clasificaría una IA?</strong> A partir de mis datos, ¿qué perfil construiría un sistema automatizado? ¿Qué decisiones podría tomar sobre mí?</li>
+              <li><strong>¿Qué implicaciones tiene?</strong> Riesgos, oportunidades, aspectos que quiero cambiar.</li>
+              <li><strong>¿Qué quiero que diga de mí mi huella digital?</strong> La versión consciente de ti mismo en la red.</li>
+            </ul>
+          </div>
+          <div class="rf">
+            <div class="rft">Reflexión individual — mientras construyes el mapa</div>
+            <ol>
+              <li>¿Existe diferencia entre quién eres en la red y quién eres en la vida real? ¿En qué?</li>
+              <li>¿Hay aspectos de tu identidad que nunca publicarías? ¿Por qué?</li>
+              <li>Si borraras todas tus cuentas hoy, ¿desaparecería tu huella digital?</li>
+              <li>¿Qué poder tiene la empresa dueña de la red social que más usas sobre tu identidad digital?</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="step s5">
+        <div class="sn">05</div>
+        <div class="sb">
+          <div class="st">Aplicar &middot; Concluir</div>
+          <h3>Construimos y presentamos nuestro perfil consciente</h3>
+          <p>Llegamos al producto final. Completas tu mapa de identidad digital, le añades el decálogo de buenas prácticas y lo presentas al grupo.</p>
+          <div class="gb gp">
+            <div class="gt">Producto final — Parte 1: Mapa de identidad digital</div>
+            <p class="mu" style="font-size:.91rem;margin-bottom:10px;">Amplía y da forma definitiva al mapa del paso anterior. Debe quedar visualmente claro y bien organizado. Incluye:</p>
+            <ul>
+              <li>Las cinco dimensiones trabajadas con ejemplos concretos propios en cada una.</li>
+              <li>Al menos un caso real de clasificación algorítmica conectado con tu realidad.</li>
+              <li>Una reflexión visual sobre qué quieres que diga de ti tu huella digital.</li>
+            </ul>
+          </div>
+          <div class="gb gp" style="margin-top:12px;">
+            <div class="gt">Producto final — Parte 2: Decálogo de buenas prácticas</div>
+            <p class="mu" style="font-size:.91rem;margin-bottom:10px;">Redacta diez principios para una presencia digital consciente, responsable y crítica. Cada principio debe estar <strong style="color:var(--tx);">argumentado</strong> con lo que has aprendido:</p>
+            <ul>
+              <li>¿Por qué es importante ese principio? ¿Qué riesgo evita o qué bien protege?</li>
+              <li>¿Cómo lo aplicarías en tu vida concreta?</li>
+              <li>¿Tiene que ver con la clasificación algorítmica, la privacidad, la identidad...?</li>
+            </ul>
+            <p class="mu" style="font-size:.91rem;margin-top:10px;">El decálogo puede ir integrado en el mapa visual o presentarse como documento complementario.</p>
+          </div>
+          <div class="gb" style="margin-top:12px;">
+            <div class="gt">Presentación final</div>
+            <p class="mu" style="font-size:.91rem;margin-bottom:10px;">Expondrás tu trabajo al grupo. Prepara:</p>
+            <ul>
+              <li>Una presentación de tu mapa: qué has descubierto sobre tu identidad digital que antes no veías.</li>
+              <li>La defensa de dos o tres puntos de tu decálogo que consideres más importantes.</li>
+              <li>Tu respuesta a esta pregunta: <strong style="color:var(--tx);">¿qué ha cambiado en tu forma de entender tu presencia digital?</strong></li>
+            </ul>
+          </div>
+          <div class="rf">
+            <div class="rft">Reflexión final — cierra el círculo</div>
+            <p class="mu" style="font-size:.91rem;margin-bottom:10px;">Recupera las respuestas que escribiste en el paso 01. Léelas y responde:</p>
+            <ol>
+              <li>¿Ha cambiado algo en lo que pensabas entonces? ¿El qué y por qué?</li>
+              <li>¿Hay algo que vayas a hacer diferente en tu comportamiento digital a partir de ahora?</li>
+              <li>¿Qué pregunta te sigue quedando sin respuesta?</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<section>
+  <div class="w">
+    <span class="lb">A lo que apuntas</span>
+    <h2>Tu producto final</h2>
+    <div class="pc">
+      <p class="mu" style="max-width:560px;position:relative;z-index:1;">Al terminar esta unidad habrás creado dos piezas que demuestran que entiendes la IA, tu identidad digital y las implicaciones sociales de vivir conectado:</p>
+      <div class="pg" style="position:relative;z-index:1;">
+        <div class="pi"><div class="ico">&#128506;</div><h4>Mapa de identidad digital</h4><p>Un esquema visual completo de quién eres en la red, qué datos generas, cómo podrías ser clasificado por una IA y qué quieres que diga de ti tu huella digital.</p></div>
+        <div class="pi"><div class="ico">&#128203;</div><h4>Decálogo de buenas prácticas</h4><p>Diez principios argumentados para una presencia digital consciente, responsable y crítica ante los sistemas de clasificación algorítmica.</p></div>
+      </div>
+      <p class="mu" style="font-size:.89rem;margin-top:26px;position:relative;z-index:1;">Puedes usar <strong style="color:var(--tx);">Canva, Genially</strong> u otras herramientas digitales. Lo importante es que el resultado sea claro, visual y argumentado.</p>
+    </div>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<section>
+  <div class="w">
+    <span class="lb">Cómo se valora</span>
+    <h2>¿Cómo se evalúa tu trabajo?</h2>
+    <p class="mu">La evaluación es continua y mira todo el proceso: lo que demuestras en tus reflexiones escritas, en los análisis de casos, en el producto final y en tu capacidad de argumentación crítica.</p>
+    <div class="eg">
+      <div class="ei"><div class="el">Comprensión de conceptos</div><p>Lista de cotejo: IA, Test de Turing y clasificación supervisada.</p></div>
+      <div class="ei"><div class="el">Participación y actitud</div><p>Observación directa durante las reflexiones, análisis y simulación.</p></div>
+      <div class="ei"><div class="el">Exposición oral</div><p>Claridad, argumentación y reflexión crítica sobre identidad digital e IA.</p></div>
+      <div class="ei"><div class="el">Producto final</div><p>Coherencia del mapa, comprensión de la IA y solidez argumentativa del decálogo.</p></div>
+      <div class="ei"><div class="el">Autoevaluación</div><p>Lista de cotejo sobre tu comprensión y las decisiones tomadas durante el proceso.</p></div>
+      <div class="ei"><div class="el">Coevaluación</div><p>Valorarás el trabajo de un compañero: claridad y coherencia del producto.</p></div>
+    </div>
+    <p style="margin-top:22px;font-size:.89rem;color:var(--mu);"><strong style="color:var(--tx);">Niveles:</strong> Excelente (10-9) &middot; Notable (8-7) &middot; Bien (6) &middot; Suficiente (5) &middot; Insuficiente (4-0)</p>
+  </div>
+</section>
+
+<div class="w">
+  <div class="bn">
+    <h2>La pregunta con la que empezaste,<br>ahora desde otro lugar</h2>
+    <p>Al principio te preguntamos si una IA podría saber quién eres a partir de tus datos. Cuando termines este trabajo, ¿cuál es tu respuesta?</p>
+    <p style="margin-top:10px;font-size:.85rem;">Y más importante: ¿qué vas a hacer con esa respuesta?</p>
+  </div>
+</div>
+
+<footer>
+  <p>Recursos de referencia:
+    <a href="https://www.aepd.es" target="_blank">aepd.es</a> &middot;
+    <a href="https://www.incibe.es" target="_blank">incibe.es</a> &middot;
+    <a href="https://www.turing.org.uk/" target="_blank">turing.org.uk</a>
+  </p>
+  <p style="margin-top:8px;">1.º Bachillerato &middot; Tecnología e Innovación Digital &middot; II Trimestre</p>
+</footer>
+
+</body>
+</html>
